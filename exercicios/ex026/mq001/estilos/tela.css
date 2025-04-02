@@ -1,0 +1,27 @@
+@charset "UTF-8";
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    background-color: gainsboro;
+}
+
+header > h1 {
+    text-align: center;
+}
+menu ul {
+    list-style-type: none;
+    background-color: antiquewhite;
+}
+menu li {
+    padding: 10px;
+    display: inline-block;
+    background-color: beige;
+    color: black;
+}
+article {
+    width: 600px;
+    display: block;
+    margin: auto;
+}
