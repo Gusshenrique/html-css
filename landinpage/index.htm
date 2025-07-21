@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalFit - Transforme Seu Corpo em 8 Semanas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1a1a1a;
+        }
+        
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(to right, #10b981, #0ea5e9);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-top: 3px solid #10b981;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #10b981;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .before-after-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .before-after-card::before {
+            content: 'ANTES';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            z-index: 2;
+        }
+        
+        .before-after-card::after {
+            content: 'DEPOIS';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: #10b981;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="title-font text-2xl font-bold text-gray-800">Vital<span class="text-green-500">Fit</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#benefits" class="nav-link text-gray-600 hover:text-gray-900">Benefícios</a>
+                <a href="#method" class="nav-link text-gray-600 hover:text-gray-900">Método</a>
+                <a href="#results" class="nav-link text-gray-600 hover:text-gray-900">Resultados</a>
+                <a href="#depositions" class="nav-link text-gray-600 hover:text-gray-900">Depoimentos</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div class="hidden md:block">
+                <a href="#purchase" class="btn-gradient text-white font-medium px-6 py-2 rounded-full">Comece Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <span class="inline-block px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm mb-4">PROGRAMA 100% ONLINE</span>
+                <h1 class="title-font text-4xl md:text-5xl font-bold leading-tight mb-6">Transforme seu corpo em <span class="underline">apenas 8 semanas</span></h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90">O método cientificamente comprovado que já ajudou mais de 5.000 pessoas a alcançarem seus objetivos de emagrecimento e definição muscular.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#purchase" class="pulse-animation bg-white text-gray-800 font-medium px-8 py-4 rounded-full text-center hover:bg-gray-100 transition">Quero me inscrever</a>
+                    <a href="#method" class="border-2 border-white text-white font-medium px-8 py-4 rounded-full text-center hover:bg-white hover:text-gray-800 transition">Como funciona</a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-10 flex flex-wrap items-center gap-4">
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/40" alt="Ícone de medalha representando excelência em emagrecimento" class="w-10 h-10 rounded-full">
+                        <span class="ml-2 text-sm">+5.000 casos de sucesso</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/40" alt="Ícone de estrelas representando avaliações positivas" class="w-10 h-10 rounded-full">
+                        <span class="ml-2 text-sm">4.9/5 na avaliação dos alunos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://placehold.co/500x600" alt="Comparativo antes e depois do método VitalFit mostrando transformação corporal impressionante em 8 semanas" class="rounded-xl shadow-xl w-full max-w-md">
+                    <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-green-100 p-2 rounded-full">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-bold text-sm text-gray-800">8-12kg</p>
+                                <p class="text-xs text-gray-500">Perda média</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients/Partners Section -->
+    <section class="py-10 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <p class="text-center text-gray-500 mb-8">APROVADO POR ESPECIALISTAS E MÍDIA</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <img src="https://placehold.co/120x40" alt="Logo da Sociedade Brasileira de Nutrição Esportiva" class="h-8 opacity-60 hover:opacity-100 transition">
+                <img src="https://placehold.co/120x40" alt="Logo da revista Saúde em Foco" class="h-8 opacity-60 hover:opacity-100 transition">
+                <img src="https://placehold.co/120x40" alt="Logo da Associação de Nutricionistas do Brasil" class="h-8 opacity-60 hover:opacity-100 transition">
+                <img src="https://placehold.co/120x40" alt="Logo do programa Bem Estar" class="h-8 opacity-60 hover:opacity-100 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">O que você vai conquistar</h2>
+                <p class="text-gray-600">Um método completo que vai muito além da perda de peso</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 p-3 rounded-full inline-flex mb-6">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Metabolismo Acelerado</h3>
+                    <p class="text-gray-600 mb-4">Aprenda a turbinar seu metabolismo para queimar gordura mesmo em repouso com nossas estratégias nutricionais.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full inline-flex mb-6">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Plano Alimentar Personalizado</h3>
+                    <p class="text-gray-600 mb-4">Receba um plano nutricional adaptado ao seu DNA, estilo de vida e preferências alimentares, sem dietas malucas.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+                    <div class="bg-green-100 p-3 rounded-full inline-flex mb-6">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Treinos em Casa</h3>
+                    <p class="text-gray-600 mb-4">Sessões de apenas 20 minutos, sem necessidade de equipamentos, para maximizar a queima de gordura.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+                    <div class="bg-yellow-100 p-3 rounded-full inline-flex mb-6">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Controle da Fome</h3>
+                    <p class="text-gray-600 mb-4">Técnicas comprovadas para reduzir a fome e os desejos por doces, mantendo você no controle.</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+                    <div class="bg-red-100 p-3 rounded-full inline-flex mb-6">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sono de Qualidade</h3>
+                    <p class="text-gray-600 mb-4">Protocolos para melhorar seu descanso - fator essencial para o emagrecimento saudável.</p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+                    <div class="bg-indigo-100 p-3 rounded-full inline-flex mb-6">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Comunidade Exclusiva</h3>
+                    <p class="text-gray-600 mb-4">Acesso a um grupo privado com suporte diário de nutricionistas e colegas na mesma jornada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section id="method" class="py-16 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">O Método VitalFit</h2>
+                <p class="text-gray-600">Baseado em 3 pilares científicos para resultados rápidos e sustentáveis</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2 order-2 lg:order-1">
+                    <!-- Step 1 -->
+                    <div class="flex mb-10">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 font-bold">1</div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Nutrição Inteligente</h4>
+                            <p class="text-gray-600">Plano alimentar flexível com estratégias de ciclagem de carboidratos, jejum intermitente e combinações alimentares que potencializam a queima de gordura.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex mb-10">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-600 font-bold">2</div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Exercícios Eficientes</h4>
+                            <p class="text-gray-600">Treinos curtos e intensos baseados no método HIIT para manter seu metabolismo acelerado por até 48 horas após o exercício.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-purple-600 font-bold">3</div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Mindset Vencedor</h4>
+                            <p class="text-gray-600">Técnicas de programação neurolinguística e psicologia comportamental para criar hábitos permanentes e vencer a autossabotagem.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 order-1 lg:order-2 mb-8 lg:mb-0">
+                    <img src="https://placehold.co/500x400" alt="Mulher sorridente medindo sua cintura com fita métrica mostrando redução de medidas" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">Resultados Reais</h2>
+                <p class="text-gray-600">Veja algumas das incríveis transformações dos nossos alunos</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Result 1 -->
+                <div class="before-after-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/500x600" alt="Comparativo antes e depois mostrando redução de 15kg em 2 meses" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Ana Paula, 32 anos</h3>
+                        <p class="text-gray-700">Perdeu 15kg em 8 semanas</p>
+                        <p class="text-sm text-gray-600 mt-2">"Nunca imaginei que poderia atingir meus objetivos tão rápido!"</p>
+                    </div>
+                </div>
+                
+                <!-- Result 2 -->
+                <div class="before-after-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/500x600" alt="Comparativo antes e depois mostrando definição muscular em 60 dias" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Carlos, 41 anos</h3>
+                        <p class="text-gray-700">11kg a menos e muito mais definição</p>
+                        <p class="text-sm text-gray-600 mt-2">"O método mudou minha relação com a comida e exercícios."</p>
+                    </div>
+                </div>
+                
+                <!-- Result 3 -->
+                <div class="before-after-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/500x600" alt="Comparativo antes e depois mostrando redução de medidas notável" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Fernanda, 28 anos</h3>
+                        <p class="text-gray-700">14kg em 10 semanas</p>
+                        <p class="text-sm text-gray-600 mt-2">"Finalmente encontrei um método que se adaptou à minha rotina."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="bg-gray-900 rounded-xl overflow-hidden shadow-xl">
+                <div class="aspect-w-16 aspect-h-9">
+                    <div class="w-full h-0 relative" style="padding-bottom: 56.25%">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <img src="https://placehold.co/800x450" alt="Thumbnail do vídeo da apresentação do método VitalFit" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center cursor-pointer hover:bg-green-600 transition">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-white mb-2">Assista a apresentação completa do método</h3>
+                    <p class="text-gray-300">Neste vídeo de 12 minutos, nossa nutricionista chefe explica como o VitalFit foi desenvolvido e por que ele funciona quando outras abordagens falham.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depositions" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">O que nossos alunos dizem</h2>
+                <p class="text-gray-600">Veja depoimentos reais de quem já transformou o corpo com nosso método</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/80" alt="Foto de Rodrigo Santos, aluno que perdeu 18kg" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Rodrigo Santos</h4>
+                            <p class="text-gray-600 text-sm">Perdeu 18kg</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Depois de tentar de tudo, o VitalFit foi o único método que trouxe resultados consistentes. Em 3 meses, alcancei o peso que desejava e mantive até hoje. Aprendi a me alimentar corretamente sem dietas malucas."</p>
+                    <div class="flex mt-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.
