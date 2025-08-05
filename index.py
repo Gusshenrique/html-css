@@ -1,23 +1,15 @@
 import re
 
-# Abrir o arquivo
-name = input("Enter file: ")
-if len(name) < 1:
-    name = "regex_sum_2260041.txt"
-
-handle = open(name)
-text = handle.read()
-
-# Encontrar todos os números usando regex
-numbers = re.findall('[0-9]+', text)
-
-# Converter para inteiros e somar
+fname = input("Enter file name: ")
 total = 0
-for number in numbers:
-    total += int(number)
+count = 0
 
-# Imprimir o resultado
-print(total)
+with open(fname, 'r') as fh:
+    for line in fh:
+        nums = re.findall(r'\d+', line)
+        count += len(nums)
+        total += sum(map(int, nums))
 
-# Fechar o arquivo
-handle.close()
+print(f"There are {count} values with a sum = {total}")
+# python sum_numbers.py # type: ignore
+        
